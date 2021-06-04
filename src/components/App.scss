@@ -1,0 +1,97 @@
+
+$primary-black : #111111;
+$primary-white : #eeeeff;
+$primary-pink : #943EF6;
+
+// Other Colors stuffs
+$primary-yellow : #E7F373;
+$secondary-yellow : #DAE853;
+$primary-green : #51F181;
+$secondary-green : #40E571;
+
+// Creating the Mixins
+@mixin flex-container($direction,$align,$justify){
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+@mixin button-component($bg-color,$text-color){
+    background-color : $bg-color;
+    color : $text-color;
+}
+@mixin container-width($cont-width){
+    max-width: $cont-width;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+//Extra Required classes
+.container-750{
+    @include container-width(750px);
+}
+
+//Stying related to the header Section
+.header__section{
+    color : $primary-white;
+    background-color: $primary-black;
+    padding: 20px;
+    @include flex-container(row, center,space-between );
+}
+
+//Stying related to the AddButton Section
+.btn-primary{
+    @include button-component($primary-pink, $primary-white);
+    width: 100%;
+    margin: 20px 0;
+}
+
+// Styling the main App 
+.app__flex{
+    // background-color: pink;
+    min-height: 100vh;
+    height: 100%;
+    @include flex-container(column, stretch,space-between );
+}
+
+//Styling about the list Item and the ListContainer Section
+.list__item{
+    background-color: $primary-white;
+    padding: 20px;
+    border-radius: 2px;
+    margin: 2.5px 0;
+    @include flex-container(row,center , space-between);
+
+    @media screen and (max-width:768px){
+        flex-wrap: wrap;
+    }
+    flex-wrap: nowrap;
+    #{&}--combo{
+        padding-right: 20px;
+        h2{
+            padding-bottom: 5px;
+        }
+    }
+
+    #{&}--changes{
+        @include flex-container(row, center, center);
+        flex-wrap: nowrap;
+        p{
+            margin-left: 10px;
+            @include flex-container(row, center, center);
+            @media screen and (max-width:768px){
+                margin: 5px 10px 0px 0px;
+            }
+        }
+    }
+}
+
+
+// Styling the footer srection
+.footer{
+    background-color: $primary-black;
+    color: $primary-white;
+    padding: 30px;
+    text-align: center;
+}

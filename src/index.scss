@@ -1,3 +1,7 @@
+// Importing the google font
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;700&display=swap');
+
+
 *,
 *::before,
 *::after{
@@ -8,7 +12,7 @@
 html,body{
     height: 100%;
     width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 ul li{
     list-style: none;
@@ -19,4 +23,20 @@ a{
 img{
     height: auto;
     width: 100%;
+}
+button{
+    padding: 20px 30px;
+    outline: none;
+    border: none;
+    border-radius: 2.5px;
+    cursor: pointer;
+}
+h1,h2,h3,h4,h5,h6,button{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+p{
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: rgb(112, 112, 112);
 }
