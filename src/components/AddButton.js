@@ -1,9 +1,16 @@
 import React from "react";
 
 const AddButton = () => {
+  const addObj = () => {
+    console.log("Object Added");
+  };
   return (
     <div className="container-750">
-      <button className="btn-primary">+ Add the Task.</button>
+      <form>
+        <button className="btn-primary" onClick={addObj}>
+          + Add the Task.
+        </button>
+      </form>
     </div>
   );
 };

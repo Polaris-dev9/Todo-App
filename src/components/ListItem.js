@@ -1,14 +1,14 @@
 import React from "react";
 
-const ListItem = () => {
+const ListItem = ({ taskObj, id }) => {
+  const { title, desc } = taskObj;
+  taskObj.id = id;
+  console.log(taskObj);
   return (
     <div className="list__item">
       <div className="list__item--combo">
-        <h2>Learning React JS.</h2>
-        <p>
-          Today I will be learning about the basics of the React JS.I will
-          definitely master the React JS.
-        </p>
+        <h2 className="list__item--combo-heading">{title}</h2>
+        <p className="list__item--combo-desc">{desc}</p>
       </div>
       <div className="list__item--changes">
         <p>

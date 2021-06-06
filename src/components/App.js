@@ -7,6 +7,18 @@ import AddButton from "./AddButton";
 import ListContainer from "./ListContainer";
 import Footer from "./Footer";
 
+//All about the data list
+const taskObjs = [
+  {
+    title: "Learning React JS.",
+    desc: "Today I will be learning the basics of the React JS.",
+  },
+  {
+    title: "Robotics Task.",
+    desc: "Task 1 to be completed by 4pm.",
+  },
+];
+
 const App = () => {
   return (
     <>
@@ -17,7 +29,7 @@ const App = () => {
           </header>
           <section className="middle">
             <AddButton />
-            <ListContainer />
+            <ListContainer taskObjs={taskObjs} />
           </section>
           <Footer />
         </div>
