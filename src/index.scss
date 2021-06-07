@@ -4,39 +4,57 @@
 
 *,
 *::before,
-*::after{
+*::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-html,body{
+
+html,
+body {
     height: 100%;
     width: 100%;
     font-family: 'IBM Plex Sans', sans-serif;
 }
-ul li{
+
+ul li {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
 }
-img{
+
+img {
     height: auto;
     width: 100%;
 }
-button{
+
+button {
     padding: 20px 30px;
     outline: none;
     border: none;
     border-radius: 2.5px;
     cursor: pointer;
 }
-h1,h2,h3,h4,h5,h6,button{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
     font-weight: 700;
     font-size: 1.5rem;
 }
-p{
+
+p {
     font-weight: 400;
     font-size: 1.5rem;
     color: rgb(112, 112, 112);
+}
+
+svg {
+    cursor: pointer;
 }

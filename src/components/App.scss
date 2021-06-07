@@ -87,6 +87,22 @@ $secondary-green : #40E571;
     }
 }
 
+//Styling the adding components
+.form__container{
+    > input{
+        width: 100%;
+        padding: 20px;
+        background-color: $primary-white;
+        border-radius: 2.5px;
+        outline: none;
+        border: none;
+        margin-bottom: 5px;
+        font-size: 1.5rem;
+        &::placeholder{
+            font-size: 1.5rem;
+        }
+    }
+}
 
 // Styling the footer srection
 .footer{

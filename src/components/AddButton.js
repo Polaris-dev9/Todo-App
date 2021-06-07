@@ -1,15 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 
 const AddButton = () => {
-  const addObj = () => {
-    console.log("Object Added");
+  const addedObj = {};
+  const [title, setTitle] = useState("");
+  const [desc, setDesc] = useState("");
+  const addObj = (e) => {
+    e.preventDefault();
+    addedObj.title = title;
+    addedObj.desc = desc;
+    setTitle("");
+    setDesc("");
+    console.log(addedObj);
   };
   return (
     <div className="container-750">
-      <form>
-        <button className="btn-primary" onClick={addObj}>
-          + Add the Task.
-        </button>
+      <form onSubmit={addObj}>
+        <div className="form__container">
+          <input
+            type="text"
+            placeholder="Title"
+            onChange={(e) => {
+              setTitle(e.target.value);
+            }}
+            value={title}
+          />
+          <input
+            type="text"
+            placeholder="Description"
+            onChange={(e) => {
+              setDesc(e.target.value);
+            }}
+            value={desc}
+          />
+        </div>
+        <button className="btn-primary">+ Add the Task.</button>
       </form>
     </div>
   );
