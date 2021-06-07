@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-const AddButton = () => {
+const AddButton = (props) => {
+  const { updateTaskObj } = props;
   const addedObj = {};
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
@@ -10,7 +11,7 @@ const AddButton = () => {
     addedObj.desc = desc;
     setTitle("");
     setDesc("");
-    console.log(addedObj);
+    updateTaskObj(addedObj);
   };
   return (
     <div className="container-750">
