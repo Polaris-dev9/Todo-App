@@ -53,6 +53,10 @@ $secondary-green : #40E571;
     min-height: 100vh;
     height: 100%;
     @include flex-container(column, stretch,space-between );
+
+    .middle{
+        margin: 100px 0;
+    }
 }
 
 //Styling about the list Item and the ListContainer Section

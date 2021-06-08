@@ -1,9 +1,7 @@
 import React from "react";
 
-const ListItem = ({ taskObj, id }) => {
+const ListItem = ({ taskObj }) => {
   const { title, desc } = taskObj;
-  taskObj.id = id;
-  console.log(taskObj);
   return (
     <div className="list__item">
       <div className="list__item--combo">

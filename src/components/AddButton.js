@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const AddButton = (props) => {
   const { updateTaskObj } = props;
@@ -9,6 +10,7 @@ const AddButton = (props) => {
     e.preventDefault();
     addedObj.title = title;
     addedObj.desc = desc;
+    addedObj.id = uuidv4();
     setTitle("");
     setDesc("");
     updateTaskObj(addedObj);
