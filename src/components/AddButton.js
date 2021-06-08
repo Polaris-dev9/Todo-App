@@ -8,6 +8,7 @@ const AddButton = (props) => {
   const [desc, setDesc] = useState("");
   const addObj = (e) => {
     e.preventDefault();
+    if (title === "" || desc === "") return;
     addedObj.title = title;
     addedObj.desc = desc;
     addedObj.id = uuidv4();
