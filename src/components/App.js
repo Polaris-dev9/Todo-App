@@ -17,6 +17,11 @@ const App = () => {
       title: "Robotics Task",
       desc: "Creating the schemantic diagram using 555 Timer IC.",
     },
+    {
+      id: uuidv4(),
+      title: "Learning JS",
+      desc: "Understanding about the Hooks.",
+    },
   ]);
   const updateTaskObj = (datas) => {
     setTaskObjs([...taskObjs, datas]);
@@ -38,6 +43,11 @@ const App = () => {
       return taskObj.id === dataID;
     });
     setEditableObj(_random);
+    setTaskObjs(newTaskObjs);
+  };
+
+  const finalObjAfterEdit = (finalObj) => {
+    setTaskObjs([...taskObjs, finalObj]);
   };
 
   return (
@@ -59,7 +69,10 @@ const App = () => {
               </section>
             </Route>
             <Route path="/edit">
-              <Edit editableObj={editableObj} />
+              <Edit
+                editableObj={editableObj}
+                finalObjAfterEdit={finalObjAfterEdit}
+              />
             </Route>
           </Switch>
           <Footer />

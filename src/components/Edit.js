@@ -4,8 +4,8 @@ import { useHistory } from "react-router-dom";
 const Edit = (props) => {
   //Using the useHistory to go back to the previous page.
   const history = useHistory();
-  const { editableObj } = props;
-  const { title, desc } = editableObj;
+  const { editableObj, finalObjAfterEdit } = props;
+  const { title, desc, id } = editableObj;
   const [title1, setTitle1] = useState(title);
   const [desc1, setDesc1] = useState(desc);
   const editingFun = (e) => {
@@ -13,6 +13,9 @@ const Edit = (props) => {
     if (title1 === "" || desc1 === "") return;
     // console.log("Done Editing!");
     history.goBack();
+    const finalObj = { id: id, title: title1, desc: desc1 };
+    // console.log(finalObj);
+    finalObjAfterEdit(finalObj);
   };
   return (
     <>
