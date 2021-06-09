@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.scss";
-import { v4 as uuidv4 } from "uuid";
 
 // Importing the components
 import Header from "./Header";
@@ -11,22 +10,10 @@ import ListContainer from "./ListContainer";
 import Footer from "./Footer";
 const App = () => {
   const [editableObj, setEditableObj] = useState({});
-  const [taskObjs, setTaskObjs] = useState([
-    {
-      id: uuidv4(),
-      title: "Robotics Task",
-      desc: "Creating the schemantic diagram using 555 Timer IC.",
-    },
-    {
-      id: uuidv4(),
-      title: "Learning JS",
-      desc: "Understanding about the Hooks.",
-    },
-  ]);
+  const [taskObjs, setTaskObjs] = useState([]);
   const updateTaskObj = (datas) => {
     setTaskObjs([...taskObjs, datas]);
   };
-  console.log(taskObjs);
 
   const objAfterDeletion = (dataID) => {
     const newTaskObjs = taskObjs.filter((taskObj) => {
