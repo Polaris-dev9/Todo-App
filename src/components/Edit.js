@@ -1,14 +1,23 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Edit = (props) => {
+  //Using the useHistory to go back to the previous page.
+  const history = useHistory();
   const { editableObj } = props;
   const { title, desc } = editableObj;
   const [title1, setTitle1] = useState(title);
   const [desc1, setDesc1] = useState(desc);
+  const editingFun = (e) => {
+    e.preventDefault();
+    if (title1 === "" || desc1 === "") return;
+    // console.log("Done Editing!");
+    history.goBack();
+  };
   return (
     <>
       <div className="container-750">
-        <form>
+        <form onSubmit={editingFun}>
           <div className="form__container">
             <input
               type="text"
