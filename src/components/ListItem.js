@@ -1,6 +1,6 @@
 import React from "react";
 
-const ListItem = ({ taskObj, objAfterDeletion }) => {
+const ListItem = ({ taskObj, objAfterDeletion, objAfterEdit }) => {
   const { title, desc, id } = taskObj;
   return (
     <div className="list__item">
@@ -9,7 +9,11 @@ const ListItem = ({ taskObj, objAfterDeletion }) => {
         <p className="list__item--combo-desc">{desc}</p>
       </div>
       <div className="list__item--changes">
-        <div>
+        <div
+          onClick={() => {
+            objAfterEdit(id);
+          }}
+        >
           <svg
             fill="#111111"
             xmlns="http://www.w3.org/2000/svg"

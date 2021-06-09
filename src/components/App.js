@@ -24,6 +24,14 @@ const App = () => {
     });
     setTaskObjs(newTaskObjs);
   };
+
+  const objAfterEdit = (dataID) => {
+    const newTaskObjs = taskObjs.filter((taskObj) => {
+      return taskObj.id !== dataID;
+    });
+    console.log(newTaskObjs);
+  };
+
   return (
     <>
       <div className="app">
@@ -36,6 +44,7 @@ const App = () => {
             <ListContainer
               taskObjs={taskObjs}
               objAfterDeletion={objAfterDeletion}
+              objAfterEdit={objAfterEdit}
             />
           </section>
           <Footer />

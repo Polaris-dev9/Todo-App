@@ -4,7 +4,12 @@ import ListItem from "./ListItem";
 // Importing the UUID
 // import { v4 as uuidv4 } from "uuid";
 
-const ListContainer = ({ taskObjs, updateTaskObj, objAfterDeletion }) => {
+const ListContainer = ({
+  taskObjs,
+  updateTaskObj,
+  objAfterDeletion,
+  objAfterEdit,
+}) => {
   const taskObjEls = taskObjs.map((taskObj) => {
     return (
       <ListItem
@@ -12,6 +17,7 @@ const ListContainer = ({ taskObjs, updateTaskObj, objAfterDeletion }) => {
         key={taskObj.id}
         updateTaskObj={updateTaskObj}
         objAfterDeletion={objAfterDeletion}
+        objAfterEdit={objAfterEdit}
       />
     );
   });
