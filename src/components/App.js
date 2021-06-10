@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.scss";
 
@@ -9,12 +9,11 @@ import Edit from "./Edit";
 import ListContainer from "./ListContainer";
 import Footer from "./Footer";
 const App = () => {
-  const [editableObj, setEditableObj] = useState({});
   const [taskObjs, setTaskObjs] = useState([]);
+  const [editableObj, setEditableObj] = useState({});
   const updateTaskObj = (datas) => {
     setTaskObjs([...taskObjs, datas]);
   };
-
   const objAfterDeletion = (dataID) => {
     const newTaskObjs = taskObjs.filter((taskObj) => {
       return taskObj.id !== dataID;
@@ -36,6 +35,16 @@ const App = () => {
   const finalObjAfterEdit = (finalObj) => {
     setTaskObjs([...taskObjs, finalObj]);
   };
+
+  //Using the local storage
+  const _local_storage_key = "storage";
+  useEffect(() => {
+    localStorage.setItem(_local_storage_key, JSON.stringify(taskObjs));
+  }, [taskObjs]);
+  useEffect(() => {
+    const allDatas = JSON.parse(localStorage.getItem(_local_storage_key));
+    setTaskObjs(allDatas);
+  }, []);
 
   return (
     <Router>
