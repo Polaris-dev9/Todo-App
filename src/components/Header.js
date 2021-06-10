@@ -10,7 +10,7 @@ const Header = () => {
             href="https://github.com/Ebraj/todo-app-using-react"
             target="blank"
           >
-            Ebraj Github!
+            Github Repo!
           </a>
         </h1>
       </section>
