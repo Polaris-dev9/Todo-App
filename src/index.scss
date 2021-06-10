@@ -23,6 +23,7 @@ ul li {
 
 a {
     text-decoration: none;
+    color: #eeeeff;
 }
 
 img {
@@ -36,6 +37,7 @@ button {
     border: none;
     border-radius: 2.5px;
     cursor: pointer;
+    font-size: 1.25rem;
 }
 
 h1,
@@ -46,12 +48,12 @@ h5,
 h6,
 button {
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 p {
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: rgb(112, 112, 112);
 }
 

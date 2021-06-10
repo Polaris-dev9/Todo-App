@@ -21,7 +21,7 @@ const ListContainer = ({
       />
     );
   });
-  return <div className="container-750">{taskObjEls}</div>;
+  return <div>{taskObjEls}</div>;
 };
 
 export default ListContainer;

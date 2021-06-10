@@ -5,7 +5,14 @@ const Header = () => {
     <>
       <section className="header__section">
         <h1>Todo App🙌</h1>
-        <h1>Github Repo!</h1>
+        <h1>
+          <a
+            href="https://github.com/Ebraj/todo-app-using-react"
+            target="blank"
+          >
+            Ebraj Github!
+          </a>
+        </h1>
       </section>
     </>
   );

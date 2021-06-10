@@ -6,7 +6,7 @@ $primary-pink : #943EF6;
 // Other Colors stuffs
 $primary-yellow : #E7F373;
 $secondary-yellow : #DAE853;
-$primary-green : #51F181;
+$primary-green : #32cc60;
 $secondary-green : #40E571;
 
 // Creating the Mixins
@@ -23,7 +23,7 @@ $secondary-green : #40E571;
 }
 @mixin container-width($cont-width){
     max-width: $cont-width;
-    margin: 0 auto;
+    margin: 60px auto;
     padding: 0px 20px;
 }
 
@@ -54,9 +54,6 @@ $secondary-green : #40E571;
     height: 100%;
     @include flex-container(column, stretch,space-between );
 
-    .middle{
-        margin: 100px 0;
-    }
 }
 
 //Styling about the list Item and the ListContainer Section
@@ -64,7 +61,7 @@ $secondary-green : #40E571;
     background-color: $primary-white;
     padding: 20px;
     border-radius: 2px;
-    margin: 2.5px 0;
+    margin: 5px 0;
     @include flex-container(row,center , space-between);
 
     @media screen and (max-width:768px){
@@ -101,9 +98,9 @@ $secondary-green : #40E571;
         outline: none;
         border: none;
         margin-bottom: 5px;
-        font-size: 1.5rem;
+        font-size: 1.45rem;
         &::placeholder{
-            font-size: 1.5rem;
+            font-size: 1.45rem;
         }
     }
 }

@@ -55,14 +55,14 @@ const App = () => {
           </header>
           <Switch>
             <Route path="/" exact>
-              <section className="middle">
+              <div className="container-750">
                 <AddButton updateTaskObj={updateTaskObj} />
                 <ListContainer
                   taskObjs={taskObjs}
                   objAfterDeletion={objAfterDeletion}
                   objAfterEdit={objAfterEdit}
                 />
-              </section>
+              </div>
             </Route>
             <Route path="/edit">
               <Edit

@@ -17,29 +17,27 @@ const AddButton = (props) => {
     updateTaskObj(addedObj);
   };
   return (
-    <div className="container-750">
-      <form onSubmit={addObj}>
-        <div className="form__container">
-          <input
-            type="text"
-            placeholder="Title"
-            onChange={(e) => {
-              setTitle(e.target.value);
-            }}
-            value={title}
-          />
-          <input
-            type="text"
-            placeholder="Description"
-            onChange={(e) => {
-              setDesc(e.target.value);
-            }}
-            value={desc}
-          />
-        </div>
-        <button className="btn-primary">+ Add the Task.</button>
-      </form>
-    </div>
+    <form onSubmit={addObj}>
+      <div className="form__container">
+        <input
+          type="text"
+          placeholder="Title"
+          onChange={(e) => {
+            setTitle(e.target.value);
+          }}
+          value={title}
+        />
+        <input
+          type="text"
+          placeholder="Description"
+          onChange={(e) => {
+            setDesc(e.target.value);
+          }}
+          value={desc}
+        />
+      </div>
+      <button className="btn-primary">+ Add the Task.</button>
+    </form>
   );
 };
 
