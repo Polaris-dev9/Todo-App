@@ -39,12 +39,12 @@ const App = () => {
   //Using the local storage
   const _local_storage_key = "storage";
   useEffect(() => {
-    localStorage.setItem(_local_storage_key, JSON.stringify(taskObjs));
-  }, [taskObjs]);
-  useEffect(() => {
     const allDatas = JSON.parse(localStorage.getItem(_local_storage_key));
     setTaskObjs(allDatas);
   }, []);
+  useEffect(() => {
+    localStorage.setItem(_local_storage_key, JSON.stringify(taskObjs));
+  }, [taskObjs]);
 
   return (
     <Router>
