@@ -9,7 +9,7 @@ const Header = () => {
           <a
             href="https://github.com/Ebraj/todo-app-using-react"
             target="blank"
-          >
+          className="link-style">
             Github Repo!
           </a>
         </h1>
