@@ -38,6 +38,9 @@ $secondary-green : #40E571;
     background-color: $primary-black;
     padding: 20px;
     @include flex-container(row, center,space-between );
+    a{
+        border-bottom: 1px solid $primary-white;
+    }
 }
 
 //Stying related to the AddButton Section
@@ -112,8 +115,4 @@ $secondary-green : #40E571;
     color: $primary-white;
     padding: 30px;
     text-align: center;
-}
-
-.link-style{
-    border-bottom : 1px soild $primary-white;
 }
